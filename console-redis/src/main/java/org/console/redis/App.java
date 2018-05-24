@@ -9,16 +9,28 @@ import redis.clients.jedis.JedisPoolConfig;
  */
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
-		Jedis jedis = new Jedis("140.143.246.241");
+		// System.out.println("Hello World!");
+		var jedis = new Jedis("140.143.246.241");
 		jedis.auth("j1234&*()");
-		
-//		JedisPoolConfig config = new JedisPoolConfig();
-//		config.setMaxTotal(10);
-		jedis.set("fot", "bar");
-		String value = jedis.get("fot");
-		System.out.println(value);
+
+		JedisPoolConfig config = new JedisPoolConfig();
+		config.setMaxTotal(10);
+//		jedis.set("fot", "bar");
+//		var value = jedis.get("fot");
+//		System.out.println(value);
+		jedis.keys("*").stream().forEach(System.out :: println);;
 		jedis.close();
-		System.out.println("71ad067c-587b-4945-9ece-614b4d3e9ed4".length());
+		new App().getConfig();
 	}
+
+	public void getConfig() {
+//		Config config = new Config();
+//		config.useSingleServer()
+//		      .setAddress("redis://140.143.246.241:6379")
+//			  .setPassword("j1234&*()");
+//		RedissonClient redisson = Redisson.create(config);
+//		RBucket<Object> bucket = redisson.getBucket("fot");
+//		System.out.println(bucket.get());
+	}
+
 }
