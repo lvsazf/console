@@ -9,6 +9,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<relativePath />
+	</parent>
+
 	<!-- <name>console</name> <url>http://maven.apache.org</url> -->
 
 	<properties>
@@ -54,12 +61,12 @@
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
 			</dependency>
-	<!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
-	<dependency>
-		<groupId>org.redisson</groupId>
-		<artifactId>redisson</artifactId>
-		<version>${redisson.version}</version>
-	</dependency>
+			<!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+			<dependency>
+				<groupId>org.redisson</groupId>
+				<artifactId>redisson</artifactId>
+				<version>${redisson.version}</version>
+			</dependency>
 		</dependencies>
 
 	</dependencyManagement>
