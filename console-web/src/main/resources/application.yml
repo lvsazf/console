@@ -3,3 +3,6 @@ server:
 spring:
   application: 
     name: ser
+redis: 
+  host: 140.143.246.241
+  password: j1234&*()
